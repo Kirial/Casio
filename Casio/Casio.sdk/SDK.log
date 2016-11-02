@@ -1,0 +1,6 @@
+17:29:03 INFO  : Registering command handlers for SDK TCF services
+17:29:03 INFO  : Launching XSCT server: xsct.bat -interactive C:\Projects\Casio\Casio.sdk\temp_xsdb_launch_script.tcl
+17:29:05 INFO  : XSCT server has started successfully.
+17:29:06 INFO  : Successfully done setting XSCT server connection channel  
+17:29:06 INFO  : Processing command line option -hwspec C:/Projects/Casio/Casio.sdk/Casio_wrapper.hdf.
+17:29:06 INFO  : Successfully done setting SDK workspace  
