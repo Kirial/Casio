@@ -4,3 +4,9 @@
 17:29:06 INFO  : Successfully done setting XSCT server connection channel  
 17:29:06 INFO  : Processing command line option -hwspec C:/Projects/Casio/Casio.sdk/Casio_wrapper.hdf.
 17:29:06 INFO  : Successfully done setting SDK workspace  
+16:19:04 INFO  : Launching XSCT server: xsct.bat -interactive C:\Projects\Casioproject\Casio\Casio.sdk\temp_xsdb_launch_script.tcl
+16:19:05 INFO  : XSCT server has started successfully.
+16:19:08 INFO  : Successfully done setting XSCT server connection channel  
+16:19:08 INFO  : Successfully done setting SDK workspace  
+16:19:09 INFO  : Registering command handlers for SDK TCF services
+16:19:10 INFO  : Processing command line option -hwspec C:/Projects/Casioproject/Casio/Casio.sdk/Casio_wrapper.hdf.
