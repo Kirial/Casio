@@ -1,3 +1,5 @@
+// Compile code: gcc -lncurses main.c
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <curses.h>
