@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Casio_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Casio_wrapper.tcl" );
+         "-log Casio_Design_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Casio_Design_wrapper.tcl" );
 
 
 

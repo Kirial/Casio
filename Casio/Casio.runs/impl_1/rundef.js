@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log Casio_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Casio_wrapper.tcl -notrace" );
+         "-log Casio_Design_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Casio_Design_wrapper.tcl -notrace" );
 
 
 

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jesper Kirial/project_5/project_5.runs/impl_1'
+HD_PWD='C:/Projects/Casioproject/Casio/Casio.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log Casio_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Casio_wrapper.tcl -notrace
+EAStep vivado -log Casio_Design_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Casio_Design_wrapper.tcl -notrace
 
 

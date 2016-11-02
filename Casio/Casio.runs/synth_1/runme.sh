@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jesper Kirial/project_5/project_5.runs/synth_1'
+HD_PWD='C:/Projects/Casioproject/Casio/Casio.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Casio_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Casio_wrapper.tcl
+EAStep vivado -log Casio_Design_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Casio_Design_wrapper.tcl
