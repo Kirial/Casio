@@ -78,7 +78,8 @@ ENTITY Casio_Design_axi_gpio_0_0 IS
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC;
-    gpio_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+    gpio_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    gpio2_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END Casio_Design_axi_gpio_0_0;
 
@@ -127,9 +128,9 @@ ARCHITECTURE Casio_Design_axi_gpio_0_0_arch OF Casio_Design_axi_gpio_0_0 IS
       gpio_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       gpio_io_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       gpio_io_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      gpio2_io_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      gpio2_io_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      gpio2_io_t : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+      gpio2_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      gpio2_io_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      gpio2_io_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT axi_gpio;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -154,6 +155,7 @@ ARCHITECTURE Casio_Design_axi_gpio_0_0_arch OF Casio_Design_axi_gpio_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF ip2intc_irpt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 IP2INTC_IRQ INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF gpio_io_i: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO TRI_I";
+  ATTRIBUTE X_INTERFACE_INFO OF gpio2_io_i: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO2 TRI_I";
 BEGIN
   U0 : axi_gpio
     GENERIC MAP (
@@ -161,15 +163,15 @@ BEGIN
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
       C_GPIO_WIDTH => 4,
-      C_GPIO2_WIDTH => 32,
+      C_GPIO2_WIDTH => 4,
       C_ALL_INPUTS => 1,
-      C_ALL_INPUTS_2 => 0,
+      C_ALL_INPUTS_2 => 1,
       C_ALL_OUTPUTS => 0,
       C_ALL_OUTPUTS_2 => 0,
       C_INTERRUPT_PRESENT => 1,
       C_DOUT_DEFAULT => X"00000000",
       C_TRI_DEFAULT => X"FFFFFFFF",
-      C_IS_DUAL => 0,
+      C_IS_DUAL => 1,
       C_DOUT_DEFAULT_2 => X"00000000",
       C_TRI_DEFAULT_2 => X"FFFFFFFF"
     )
@@ -195,6 +197,6 @@ BEGIN
       s_axi_rready => s_axi_rready,
       ip2intc_irpt => ip2intc_irpt,
       gpio_io_i => gpio_io_i,
-      gpio2_io_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32))
+      gpio2_io_i => gpio2_io_i
     );
 END Casio_Design_axi_gpio_0_0_arch;

@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-//Date        : Wed Nov 02 23:09:34 2016
+//Date        : Wed Nov 09 16:53:10 2016
 //Host        : Thinkpad running 64-bit major release  (build 9200)
 //Command     : generate_target Casio_Design.bd
 //Design      : Casio_Design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Casio_Design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Casio_Design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Casio_Design.hwdef" *) 
+(* CORE_GENERATION_INFO = "Casio_Design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Casio_Design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Casio_Design.hwdef" *) 
 module Casio_Design
    (DDR_addr,
     DDR_ba,
@@ -35,7 +35,8 @@ module Casio_Design
     btns_4bits_tri_i,
     leds_4bits_tri_i,
     leds_4bits_tri_o,
-    leds_4bits_tri_t);
+    leds_4bits_tri_t,
+    sws_4bits_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -61,7 +62,9 @@ module Casio_Design
   input [3:0]leds_4bits_tri_i;
   output [3:0]leds_4bits_tri_o;
   output [3:0]leds_4bits_tri_t;
+  input [3:0]sws_4bits_tri_i;
 
+  wire [3:0]axi_gpio_0_GPIO2_TRI_I;
   wire [3:0]axi_gpio_0_GPIO_TRI_I;
   wire axi_gpio_0_ip2intc_irpt;
   wire [3:0]axi_gpio_1_GPIO_TRI_I;
@@ -184,12 +187,14 @@ module Casio_Design
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [1:0]xlconcat_0_dout;
 
+  assign axi_gpio_0_GPIO2_TRI_I = sws_4bits_tri_i[3:0];
   assign axi_gpio_0_GPIO_TRI_I = btns_4bits_tri_i[3:0];
   assign axi_gpio_1_GPIO_TRI_I = leds_4bits_tri_i[3:0];
   assign leds_4bits_tri_o[3:0] = axi_gpio_1_GPIO_TRI_O;
   assign leds_4bits_tri_t[3:0] = axi_gpio_1_GPIO_TRI_T;
   Casio_Design_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
+       (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
+        .gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),

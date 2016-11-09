@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="C:/Projects/Casioproject/Casio/Casio.xpr">
+<Project Version="7" Minor="17" Path="C:/Projects/Casioproject/Casio/Casio/Casio.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7c6d24cf79aa42079d7eacb5e9ead526"/>
@@ -59,16 +59,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_xlconcat_0_0/Casio_Design_xlconcat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_gpio_1_1/Casio_Design_axi_gpio_1_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_gpio_0_0/Casio_Design_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_rst_ps7_0_100M_1/Casio_Design_rst_ps7_0_100M_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_gpio_1_1/Casio_Design_axi_gpio_1_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_gpio_0_0/Casio_Design_axi_gpio_0_0.xci">
+          <Proxy FileSetName="Casio_Design_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="hdl/Casio_Design.v"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_xbar_0/Casio_Design_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_ps7_0_axi_periph_1/Casio_Design_ps7_0_axi_periph_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="hdl/Casio_Design.v"/>
-        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_auto_pc_0/Casio_Design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="Casio_Design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="ip/Casio_Design_auto_pc_0/Casio_Design_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="hdl/Casio_Design.hwdef"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="hw_handoff/Casio_Design_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="Casio_Design.bd" FileRelPathName="hw_handoff/Casio_Design.hwh"/>
@@ -104,6 +106,12 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
+    <FileSet Name="Casio_Design_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Casio_Design_axi_gpio_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Casio_Design_axi_gpio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -132,6 +140,16 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="Casio_Design_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="Casio_Design_axi_gpio_0_0" Part="xc7z010clg400-1" ConstrsSet="Casio_Design_axi_gpio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/Casio_Design_axi_gpio_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
@@ -146,6 +164,23 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="Casio_Design_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Casio_Design_axi_gpio_0_0" Description="Default settings for Implementation." SynthRun="Casio_Design_axi_gpio_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
   </Runs>

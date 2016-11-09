@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-//Date        : Wed Nov 02 23:09:34 2016
+//Date        : Wed Nov 09 16:53:10 2016
 //Host        : Thinkpad running 64-bit major release  (build 9200)
 //Command     : generate_target Casio_Design_wrapper.bd
 //Design      : Casio_Design_wrapper
@@ -32,7 +32,8 @@ module Casio_Design_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     btns_4bits_tri_i,
-    leds_4bits_tri_io);
+    leds_4bits_tri_io,
+    sws_4bits_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -56,6 +57,7 @@ module Casio_Design_wrapper
   inout FIXED_IO_ps_srstb;
   input [3:0]btns_4bits_tri_i;
   inout [3:0]leds_4bits_tri_io;
+  input [3:0]sws_4bits_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -95,6 +97,7 @@ module Casio_Design_wrapper
   wire [1:1]leds_4bits_tri_t_1;
   wire [2:2]leds_4bits_tri_t_2;
   wire [3:3]leds_4bits_tri_t_3;
+  wire [3:0]sws_4bits_tri_i;
 
   Casio_Design Casio_Design_i
        (.DDR_addr(DDR_addr),
@@ -121,7 +124,8 @@ module Casio_Design_wrapper
         .btns_4bits_tri_i(btns_4bits_tri_i),
         .leds_4bits_tri_i({leds_4bits_tri_i_3,leds_4bits_tri_i_2,leds_4bits_tri_i_1,leds_4bits_tri_i_0}),
         .leds_4bits_tri_o({leds_4bits_tri_o_3,leds_4bits_tri_o_2,leds_4bits_tri_o_1,leds_4bits_tri_o_0}),
-        .leds_4bits_tri_t({leds_4bits_tri_t_3,leds_4bits_tri_t_2,leds_4bits_tri_t_1,leds_4bits_tri_t_0}));
+        .leds_4bits_tri_t({leds_4bits_tri_t_3,leds_4bits_tri_t_2,leds_4bits_tri_t_1,leds_4bits_tri_t_0}),
+        .sws_4bits_tri_i(sws_4bits_tri_i));
   IOBUF leds_4bits_tri_iobuf_0
        (.I(leds_4bits_tri_o_0),
         .IO(leds_4bits_tri_io[0]),

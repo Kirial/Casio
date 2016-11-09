@@ -158,17 +158,18 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
   set btns_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_4bits ]
   set leds_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_4bits ]
+  set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
 
   # Create ports
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
-CONFIG.C_ALL_INPUTS_2 {0} \
-CONFIG.C_GPIO2_WIDTH {32} \
+CONFIG.C_ALL_INPUTS_2 {1} \
+CONFIG.C_GPIO2_WIDTH {4} \
 CONFIG.C_INTERRUPT_PRESENT {1} \
-CONFIG.C_IS_DUAL {0} \
-CONFIG.GPIO2_BOARD_INTERFACE {Custom} \
+CONFIG.C_IS_DUAL {1} \
+CONFIG.GPIO2_BOARD_INTERFACE {sws_4bits} \
 CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_0
@@ -1363,6 +1364,7 @@ CONFIG.NUM_MI {3} \
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btns_4bits] [get_bd_intf_pins axi_gpio_0/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports sws_4bits] [get_bd_intf_pins axi_gpio_0/GPIO2]
   connect_bd_intf_net -intf_net axi_gpio_1_GPIO [get_bd_intf_ports leds_4bits] [get_bd_intf_pins axi_gpio_1/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -1389,31 +1391,33 @@ CONFIG.NUM_MI {3} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port btns_4bits -pg 1 -y 350 -defaultsOSRD
+preplace port btns_4bits -pg 1 -y 340 -defaultsOSRD
 preplace port DDR -pg 1 -y 450 -defaultsOSRD
+preplace port sws_4bits -pg 1 -y 360 -defaultsOSRD
 preplace port leds_4bits -pg 1 -y 60 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 470 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -y 450 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 440 -defaultsOSRD
 preplace inst axi_timer_0 -pg 1 -lvl 4 -y 210 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 360 -defaultsOSRD
 preplace inst axi_gpio_1 -pg 1 -lvl 4 -y 60 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 260 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 280 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 540 -defaultsOSRD
-preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 960
 preplace netloc processing_system7_0_DDR 1 2 3 NJ 450 NJ 450 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 960
 preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 650
 preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 660 100 950
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 190 610
 preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 920
 preplace netloc xlconcat_0_dout 1 1 1 200
+preplace netloc axi_gpio_0_GPIO2 1 4 1 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 470 NJ 470 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ
-preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 10 380 NJ 380 630J 440 NJ 440 1180
+preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 10 370 NJ 370 630J 440 NJ 440 1180
 preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 210 60 640 60 940
 preplace netloc axi_gpio_1_GPIO 1 4 1 NJ
 preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 930
-preplace netloc axi_timer_0_interrupt 1 0 5 20 390 NJ 390 620J 430 NJ 430 1190
+preplace netloc axi_timer_0_interrupt 1 0 5 20 380 NJ 380 620J 430 NJ 430 1190
 preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 620
 levelinfo -pg 1 -10 110 420 790 1070 1210 -top 0 -bot 680
 ",
