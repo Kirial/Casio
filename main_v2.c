@@ -1,8 +1,8 @@
 // Compile code: gcc -lncurses main.c
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <curses.h>
+//#include <stdlib.h>
+//#include <curses.h>
 #include "asciisymbols_v2.h"
 
 // PROGRAM
@@ -434,7 +434,7 @@ void clearDisplay() {
     }
   }
 
-  system("clear");
+  //system("clear");
 }
 
 void displayColon() {
