@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Wed Nov 09 16:54:38 2016
-# Process ID: 14936
+# Start of session at: Wed Nov 09 17:05:07 2016
+# Process ID: 3192
 # Current directory: C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1
 # Command line: vivado.exe -log Casio_Design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Casio_Design_wrapper.tcl -notrace
 # Log file: C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper.vdi
@@ -14,29 +14,30 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-454] Reading design checkpoint 'C:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_0_0/Casio_Design_axi_gpio_0_0.dcp' for cell 'Casio_Design_i/axi_gpio_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_1_1/Casio_Design_axi_gpio_1_1.dcp' for cell 'Casio_Design_i/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0.dcp' for cell 'Casio_Design_i/axi_gpio_2'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.dcp' for cell 'Casio_Design_i/axi_timer_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.dcp' for cell 'Casio_Design_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_rst_ps7_0_100M_1/Casio_Design_rst_ps7_0_100M_1.dcp' for cell 'Casio_Design_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_xlconcat_0_0/Casio_Design_xlconcat_0_0.dcp' for cell 'Casio_Design_i/xlconcat_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_xbar_0/Casio_Design_xbar_0.dcp' for cell 'Casio_Design_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'C:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_xbar_0/Casio_Design_xbar_0.dcp' for cell 'Casio_Design_i/ps7_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_auto_pc_0/Casio_Design_auto_pc_0.dcp' for cell 'Casio_Design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.3
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio2_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7008]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio2_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7015]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio2_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7022]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio2_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7029]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7037]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7044]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7051]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:7058]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3847]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3854]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3861]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-14936-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3868]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:5520]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:5527]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:5534]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_0/gpio_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_3/Casio_Design_axi_gpio_0_0.edf:5541]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3847]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3854]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3861]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_1/gpio_io_t[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_4/Casio_axi_gpio_0_1.edf:3868]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_2/gpio_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_9/Casio_Design_axi_gpio_2_0.edf:3787]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_2/gpio_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_9/Casio_Design_axi_gpio_2_0.edf:3794]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_2/gpio_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_9/Casio_Design_axi_gpio_2_0.edf:3801]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'Casio_Design_i/axi_gpio_2/gpio_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/.Xil/Vivado-3192-Thinkpad/dcp_9/Casio_Design_axi_gpio_2_0.edf:3808]
 Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.xdc] for cell 'Casio_Design_i/processing_system7_0/inst'
 Finished Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.xdc] for cell 'Casio_Design_i/processing_system7_0/inst'
 Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_0_0/Casio_Design_axi_gpio_0_0_board.xdc] for cell 'Casio_Design_i/axi_gpio_0/U0'
@@ -53,19 +54,24 @@ Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/C
 Finished Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_rst_ps7_0_100M_1/Casio_Design_rst_ps7_0_100M_1.xdc] for cell 'Casio_Design_i/rst_ps7_0_100M/U0'
 Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.xdc] for cell 'Casio_Design_i/axi_timer_0/U0'
 Finished Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.xdc] for cell 'Casio_Design_i/axi_timer_0/U0'
+Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0_board.xdc] for cell 'Casio_Design_i/axi_gpio_2/U0'
+Finished Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0_board.xdc] for cell 'Casio_Design_i/axi_gpio_2/U0'
+Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0.xdc] for cell 'Casio_Design_i/axi_gpio_2/U0'
+Finished Parsing XDC File [c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0.xdc] for cell 'Casio_Design_i/axi_gpio_2/U0'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_processing_system7_0_0/Casio_Design_processing_system7_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_0_0/Casio_Design_axi_gpio_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_1_1/Casio_Design_axi_gpio_1_1.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_rst_ps7_0_100M_1/Casio_Design_rst_ps7_0_100M_1.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_xbar_0/Casio_Design_xbar_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_xbar_0/Casio_Design_xbar_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_timer_0_0/Casio_Design_axi_timer_0_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Projects/Casioproject/Casio/Casio/Casio.srcs/sources_1/bd/Casio_Design/ip/Casio_Design_auto_pc_0/Casio_Design_auto_pc_0.dcp'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 489.656 ; gain = 280.059
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 490.473 ; gain = 281.254
 CRITICAL WARNING: [Pfi 67-13] Hardware Handoff file Casio_processing_system7_0_0.hwdef does not exist for instance Casio_Design_i/processing_system7_0/inst
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -77,61 +83,61 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.482 . Memory (MB): peak = 499.902 ; gain = 10.246
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.495 . Memory (MB): peak = 500.754 ; gain = 10.281
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: 1b98986d9
+Implement Debug Cores | Checksum: 2062db2f2
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 2276f208f
+Phase 1 Retarget | Checksum: 1841e2e26
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.235 . Memory (MB): peak = 988.727 ; gain = 0.004
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 87 cells.
-Phase 2 Constant propagation | Checksum: 13e4f594f
+INFO: [Opt 31-10] Eliminated 124 cells.
+Phase 2 Constant propagation | Checksum: 14a85fde1
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.582 . Memory (MB): peak = 988.727 ; gain = 0.004
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.630 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 296 unconnected nets.
-INFO: [Opt 31-11] Eliminated 219 unconnected cells.
-Phase 3 Sweep | Checksum: 143b6aeb5
+INFO: [Opt 31-12] Eliminated 333 unconnected nets.
+INFO: [Opt 31-11] Eliminated 222 unconnected cells.
+Phase 3 Sweep | Checksum: 12f559281
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 988.727 ; gain = 0.004
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-12] Eliminated 0 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
-Phase 4 BUFG optimization | Checksum: 1fddb1937
+Phase 4 BUFG optimization | Checksum: 13e62949a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 988.727 ; gain = 0.004
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 988.727 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1fddb1937
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 989.445 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 13e62949a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 988.727 ; gain = 0.004
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 1fddb1937
+Ending Power Optimization Task | Checksum: 13e62949a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 988.727 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 989.445 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-37 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+39 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 988.727 ; gain = 499.070
+opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 989.445 ; gain = 498.973
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.106 . Memory (MB): peak = 988.727 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 989.445 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper_opt.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper_drc_opted.rpt.
@@ -153,77 +159,77 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 988.727 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 988.727 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 989.445 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 989.445 ; gain = 0.000
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 5a51d808
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13a86e94d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 1.2 Build Placer Netlist Model
-Phase 1.2 Build Placer Netlist Model | Checksum: 14824073b
+Phase 1.2 Build Placer Netlist Model | Checksum: 12fd8bf06
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: 14824073b
+Phase 1.3 Constrain Clocks/Macros | Checksum: 12fd8bf06
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.227 ; gain = 26.500
-Phase 1 Placer Initialization | Checksum: 14824073b
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.152 ; gain = 25.707
+Phase 1 Placer Initialization | Checksum: 12fd8bf06
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1987b04dc
+Phase 2 Global Placement | Checksum: 184b2d452
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1987b04dc
+Phase 3.1 Commit Multi Column Macros | Checksum: 184b2d452
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e7e885d3
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e1584d8f
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 24f45db28
+Phase 3.3 Area Swap Optimization | Checksum: 16cb180ba
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 24f45db28
+Phase 3.4 Pipeline Register Optimization | Checksum: 16cb180ba
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 1f55bd628
+Phase 3.5 Timing Path Optimizer | Checksum: 1e4e82734
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 1788364be
+Phase 3.6 Small Shape Detail Placement | Checksum: 142ae2104
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1ee7eb9f3
+Phase 3.7 Re-assign LUT pins | Checksum: 181d34368
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1ee7eb9f3
+Phase 3.8 Pipeline Register Optimization | Checksum: 181d34368
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.227 ; gain = 26.500
-Phase 3 Detail Placement | Checksum: 1ee7eb9f3
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
+Phase 3 Detail Placement | Checksum: 181d34368
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -231,47 +237,47 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=3.768. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1e3c81e94
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.638. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1fc96431e
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
-Phase 4.1 Post Commit Optimization | Checksum: 1e3c81e94
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
+Phase 4.1 Post Commit Optimization | Checksum: 1fc96431e
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1e3c81e94
+Phase 4.2 Post Placement Cleanup | Checksum: 1fc96431e
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1e3c81e94
+Phase 4.3 Placer Reporting | Checksum: 1fc96431e
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1461c1bb8
+Phase 4.4 Final Placement Cleanup | Checksum: 2178ef3ca
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1461c1bb8
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2178ef3ca
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
-Ending Placer Task | Checksum: d082b92d
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
+Ending Placer Task | Checksum: 18d948e2a
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.227 ; gain = 26.500
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.152 ; gain = 25.707
 INFO: [Common 17-83] Releasing license: Implementation
-53 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+55 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.227 ; gain = 26.500
+place_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.152 ; gain = 25.707
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.309 . Memory (MB): peak = 1015.227 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.299 . Memory (MB): peak = 1015.152 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper_placed.dcp' has been generated.
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1015.227 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1015.227 ; gain = 0.000
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1015.227 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1015.152 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1015.152 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1015.152 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -283,116 +289,117 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 9fde0f72 ConstDB: 0 ShapeSum: 30a4a9bb RouteDB: 0
+Checksum: PlaceDB: bf928abd ConstDB: 0 ShapeSum: ce02036d RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: c08b9d6f
+Phase 1 Build RT Design | Checksum: 11423ce06
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: c08b9d6f
+Phase 2.1 Create Timer | Checksum: 11423ce06
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: c08b9d6f
+Phase 2.2 Fix Topology Constraints | Checksum: 11423ce06
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: c08b9d6f
+Phase 2.3 Pre Route Cleanup | Checksum: 11423ce06
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1085.918 ; gain = 70.766
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1b91447c4
+Phase 2.4 Update Timing | Checksum: 11587b5cb
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1090.984 ; gain = 75.758
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.685  | TNS=0.000  | WHS=-0.240 | THS=-21.344|
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1085.918 ; gain = 70.766
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.586  | TNS=0.000  | WHS=-0.175 | THS=-24.067|
 
-Phase 2 Router Initialization | Checksum: 2317f358a
+Phase 2 Router Initialization | Checksum: 1c2c6cd37
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: cc6ea673
+Phase 3 Initial Routing | Checksum: f97d1b25
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 143
+ Number of Nodes with overlaps = 166
  Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 1a3d88541
+Phase 4.1.1 Update Timing | Checksum: 184d473a4
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.312  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.517  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 821ede6d
+Phase 4.1 Global Iteration 0 | Checksum: 19497ca03
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 2260dbaf3
+Phase 4.2.1 Update Timing | Checksum: fe91d936
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.312  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.517  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1abba863d
+Phase 4.2 Global Iteration 1 | Checksum: 1b29345d8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
-Phase 4 Rip-up And Reroute | Checksum: 1abba863d
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+Phase 4 Rip-up And Reroute | Checksum: 1b29345d8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 1abba863d
+Phase 5.1 Delay CleanUp | Checksum: 1b29345d8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1abba863d
+Phase 5.2 Clock Skew Optimization | Checksum: 1b29345d8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1090.984 ; gain = 75.758
-Phase 5 Delay and Skew Optimization | Checksum: 1abba863d
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+Phase 5 Delay and Skew Optimization | Checksum: 1b29345d8
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 211fee194
+Phase 6.1.1 Update Timing | Checksum: f2a0f614
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.462  | TNS=0.000  | WHS=0.022  | THS=0.000  |
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.667  | TNS=0.000  | WHS=0.018  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 244313de5
+Phase 6.1 Hold Fix Iter | Checksum: 115b6693f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
-Phase 6 Post Hold Fix | Checksum: 244313de5
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
+Phase 6 Post Hold Fix | Checksum: 115b6693f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.734657 %
-  Global Horizontal Routing Utilization  = 1.04733 %
+  Global Vertical Routing Utilization    = 0.740287 %
+  Global Horizontal Routing Utilization  = 1.02987 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -401,43 +408,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 259f79a79
+Phase 7 Route finalize | Checksum: 14687bd36
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 259f79a79
+Phase 8 Verifying routed nets | Checksum: 14687bd36
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1a67b453d
+Phase 9 Depositing Routes | Checksum: 14ca3b2eb
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=3.462  | TNS=0.000  | WHS=0.022  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.667  | TNS=0.000  | WHS=0.018  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1a67b453d
+Phase 10 Post Router Timing | Checksum: 14ca3b2eb
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1085.918 ; gain = 70.766
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1090.984 ; gain = 75.758
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1085.918 ; gain = 70.766
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-67 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+69 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1090.984 ; gain = 75.758
+route_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1085.918 ; gain = 70.766
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.371 . Memory (MB): peak = 1090.984 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.372 . Memory (MB): peak = 1085.918 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper_routed.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Projects/Casioproject/Casio/Casio/Casio.runs/impl_1/Casio_Design_wrapper_drc_routed.rpt.
@@ -452,7 +459,7 @@ Command: report_power -file Casio_Design_wrapper_power_routed.rpt -pb Casio_Desi
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-77 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+79 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 Command: write_bitstream -force -no_partial_bitfile Casio_Design_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -471,7 +478,7 @@ Writing bitstream ./Casio_Design_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-84 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+86 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1443.824 ; gain = 334.199
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 09 16:56:06 2016...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1445.313 ; gain = 333.887
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 09 17:06:31 2016...

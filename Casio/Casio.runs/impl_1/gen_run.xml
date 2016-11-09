@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1478706800">
-  <File Type="PWROPT-DRC" Name="Casio_Design_wrapper_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Casio_Design_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="Casio_Design_wrapper_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1478707348">
   <File Type="ROUTE-PWR-RPX" Name="Casio_Design_wrapper_power_routed.rpx"/>
   <File Type="PA-TCL" Name="Casio_Design_wrapper.tcl"/>
-  <File Type="OPT-HWDEF" Name="Casio_Design_wrapper.hwdef"/>
+  <File Type="INIT-TIMING" Name="Casio_Design_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Casio_Design_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Casio_Design_wrapper_drc_pwropted.rpt"/>
   <File Type="RDI-RDI" Name="Casio_Design_wrapper.vdi"/>
   <File Type="OPT-DCP" Name="Casio_Design_wrapper_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="Casio_Design_wrapper.hwdef"/>
   <File Type="OPT-DRC" Name="Casio_Design_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="Casio_Design_wrapper_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="Casio_Design_wrapper_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="Casio_Design_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Casio_Design_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Casio_Design_wrapper_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="Casio_Design_wrapper.bin"/>
   <File Type="ROUTE-DRC-RPX" Name="Casio_Design_wrapper_drc_routed.rpx"/>
-  <File Type="BG-DRC" Name="Casio_Design_wrapper.drc"/>
+  <File Type="BG-BIN" Name="Casio_Design_wrapper.bin"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Casio_Design_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MSK" Name="Casio_Design_wrapper.msk"/>
+  <File Type="BG-DRC" Name="Casio_Design_wrapper.drc"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Casio_Design_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="Casio_Design_wrapper.bgn"/>
+  <File Type="BITSTR-MSK" Name="Casio_Design_wrapper.msk"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Casio_Design_wrapper_methodology_drc_routed.pb"/>
+  <File Type="BG-BGN" Name="Casio_Design_wrapper.bgn"/>
   <File Type="ROUTE-PWR" Name="Casio_Design_wrapper_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="Casio_Design_wrapper_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="Casio_Design_wrapper_route_status.rpt"/>
@@ -101,4 +101,6 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Casio_Design_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Casio_Design_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Casio_Design_axi_gpio_2_0"/>
 </GenRun>
