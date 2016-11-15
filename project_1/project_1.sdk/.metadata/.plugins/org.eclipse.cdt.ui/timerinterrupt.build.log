@@ -1,0 +1,23 @@
+09:50:44 **** Auto Build of configuration Debug for project timerinterrupt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../timerinterrupt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+../src/interrupt_counter_tut_2D_fixed.c: In function 'InterruptSystemSetup':
+../src/interrupt_counter_tut_2D_fixed.c:251:2: warning: implicit declaration of function 'Gpio_InterruptEnable' [-Wimplicit-function-declaration]
+  Gpio_InterruptEnable(&SWTInst, SWT_INT);
+  ^
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building target: timerinterrupt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../timerinterrupt_bsp/ps7_cortexa9_0/lib -o "timerinterrupt.elf"  ./src/interrupt_counter_tut_2D_fixed.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Projects\Casioproject\project_1\project_1.sdk\timerinterrupt\Debug/../src/interrupt_counter_tut_2D_fixed.c:251: undefined reference to `Gpio_InterruptEnable'
+collect2.exe: error: ld returned 1 exit status
+make: *** [timerinterrupt.elf] Error 1
+
+09:50:45 Build Finished (took 722ms)
+
