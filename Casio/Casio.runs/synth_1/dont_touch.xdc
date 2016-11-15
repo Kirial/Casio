@@ -28,6 +28,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Casio_Design_ax
 # IP: bd/Casio_Design/ip/Casio_Design_xlconcat_0_0/Casio_Design_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Casio_Design_xlconcat_0_0 || ORIG_REF_NAME==Casio_Design_xlconcat_0_0}]
 
+# IP: bd/Casio_Design/ip/Casio_Design_axi_gpio_2_0/Casio_Design_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Casio_Design_axi_gpio_2_0 || ORIG_REF_NAME==Casio_Design_axi_gpio_2_0}]
+
 # IP: bd/Casio_Design/ip/Casio_Design_auto_pc_0/Casio_Design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Casio_Design_auto_pc_0 || ORIG_REF_NAME==Casio_Design_auto_pc_0}]
 
