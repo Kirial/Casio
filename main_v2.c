@@ -1,7 +1,8 @@
 // Compile code: gcc -lncurses main.c
 
 #include <stdio.h>
-//#include <stdlib.h>
+#include <stdlib.h>
+#include <thread>
 //#include <curses.h>
 #include "asciisymbols_v2.h"
 
@@ -16,6 +17,7 @@ int seconds = 0;
 int minutes = 0;
 int hours = 0;
 int setTimeMode = 0;
+int setHoursMinutesSeconds = 1;
 
 // STOPWATCH
 int stopwatchTimer = 0;
@@ -46,6 +48,9 @@ void initDisplay();
 void updateDisplay();
 void printDisplay();
 void clearDisplay();
+void clearHours();
+void clearMinutes();
+void clearSeconds();
 void setCharDisplay(int position, int digit);
 void displayColon();
 
@@ -67,11 +72,19 @@ int main() {
 
   initDisplay();
 
-  while(1) {
+  updateDisplay();
 
-    updateDisplay();
+  timeInterrupt();
 
-  }
+  timeInterrupt();
+
+  timeInterrupt();
+
+  timeInterrupt();
+
+  buttonInterrupt(1);
+
+  buttonInterrupt(4);
 
   return 0;
 
@@ -85,6 +98,8 @@ void buttonInterrupt(int button) {
 
   // read which button is pressed
   // button = ???
+
+  printf("Button interrupt.\n");
 
   if(button == 4) { // Invert display.
     printf("Invert ASCII GUI.");
@@ -113,6 +128,8 @@ void buttonInterrupt(int button) {
 }
 
 void timeInterrupt() {
+
+  printf("Time interrupt.\n");
 
   timer++; // Update timer.
 
@@ -150,6 +167,8 @@ void timeInterrupt() {
   }
 
   updateProgram(0);
+
+  updateDisplay();
 
   return;
 
@@ -264,6 +283,8 @@ void updateProgram(int input) {
 
 void updateDisplay() {
 
+  clearDisplay();
+
   switch(programMode) {
 
     case 1: // Time
@@ -274,14 +295,12 @@ void updateDisplay() {
     setCharDisplay(4, minutes%10);
     setCharDisplay(5, seconds/10);
     setCharDisplay(6, seconds%10);
+
     toggleColon = timer%2;
+
     displayColon();
 
-    clearDisplay();
-
     printf("[Time Mode]\n");
-
-    printDisplay();
 
     break;
 
@@ -296,14 +315,10 @@ void updateDisplay() {
     toggleColon = stopwatchTimer%2;
     displayColon();
 
-    clearDisplay();
-
     printf("[Stopwatch Mode]");
     if(stopwatchCounting) printf("[Counting]");
     if(stopwatchLapping) printf("[Lapping]");
     printf("\n");
-
-    printDisplay();
 
     break;
 
@@ -318,23 +333,43 @@ void updateDisplay() {
 
     // Show on / off.
 
-    clearDisplay();
-
     printf("[Alarm Mode]");
     if(setAlarm) printf("[Set]");
     if(setAlarmMode == 1) printf("[Adjust Hours]");
     if(setAlarmMode == 2) printf("[Adjust Minutes]");
     printf("/n");
 
-    printDisplay();
-
     break;
 
     case 4:
 
-    clearDisplay();
+    setCharDisplay(1, hours/10);
+    setCharDisplay(2, hours%10);
+    setCharDisplay(3, minutes/10);
+    setCharDisplay(4, minutes%10);
+    setCharDisplay(5, seconds/10);
+    setCharDisplay(6, seconds%10);
 
     printf("[Set Time Mode]");
+
+    if(setTimeMode) {
+      switch (setHoursMinutesSeconds) {
+        case 1:
+          printf("[Set hours]\n");
+          if(timer%2 == 0) clearHours();
+        break;
+        case 2:
+          printf("[Set Minutes]\n");
+          if(timer%2 == 0) clearMinutes();
+        break;
+        case 3:
+          printf("Set Seconds");
+          if(timer%2 == 0) clearSeconds();
+        break;
+        default:
+        break;
+      }
+    }
 
     break;
 
@@ -351,11 +386,7 @@ void updateDisplay() {
         display[timer % displayWidth][i] = '&';
     }
 
-    clearDisplay();
-
     printf("[Alarming Mode]");
-
-    printDisplay();
 
     break;
 
@@ -366,6 +397,8 @@ void updateDisplay() {
     break;
 
   }
+
+  printDisplay();
 
   return;
 
@@ -428,13 +461,37 @@ void setCharDisplay(int position, int digit) {
 }
 
 void clearDisplay() {
-  for(int i = 0; i < displayWidth; i++) {
+  // for(int i = 0; i < displayWidth; i++) {
+  //   for(int j = 0; j < displayHeight; j++) {
+  //     display[i][j] = ' ';
+  //   }
+  // }
+
+  system("clear");
+}
+
+void clearHours() {
+  for(int i = 0; i < 13; i++) {
     for(int j = 0; j < displayHeight; j++) {
       display[i][j] = ' ';
     }
   }
+}
 
-  //system("clear");
+void clearMinutes() {
+  for(int i = 0; i < 13; i++) {
+    for(int j = 0; j < displayHeight; j++) {
+      display[i+18][j] = ' ';
+    }
+  }
+}
+
+void clearSeconds() {
+  for(int i = 0; i < 13; i++) {
+    for(int j = 0; j < displayHeight; j++) {
+      display[i+35][j] = ' ';
+    }
+  }
 }
 
 void displayColon() {
@@ -457,11 +514,16 @@ void displayColon() {
 }
 
 void initDisplay() {
+
+  printf("Initialising display...\n");
+
   for(int i = 0; i < displayWidth; i++) {
     for(int j = 0; j < displayHeight; j++) {
       display[i][j] = ' ';
     }
   }
+
+  printf("Display initalised.\n");
 }
 
 void introduction() {
