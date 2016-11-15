@@ -456,3 +456,131 @@ con
 ----------------End of Script----------------
 
 10:16:51 INFO  : Launch script is exported to file 'C:\Users\taras\Documents\watch\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ur.elf_on_local.tcl'
+10:20:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574575A" && level==0} -index 1' command is executed.
+10:20:09 INFO  : FPGA configured successfully with bitstream "C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:20:17 INFO  : Disconnected from the channel tcfchan#2.
+10:20:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574575A" && level==0} -index 1' command is executed.
+10:20:18 INFO  : 'fpga -state' command is executed.
+10:20:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:19 INFO  : Jtag cable 'Digilent Zybo 210279574575A' is selected.
+10:20:19 INFO  : 'jtag frequency' command is executed.
+10:20:19 INFO  : Sourcing of 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:20:19 INFO  : Context for 'APU' is selected.
+10:20:19 INFO  : Hardware design information is loaded from 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:20:19 INFO  : Context for 'APU' is selected.
+10:20:19 INFO  : 'stop' command is executed.
+10:20:19 INFO  : 'ps7_init' command is executed.
+10:20:19 INFO  : 'ps7_post_config' command is executed.
+10:20:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:20:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:20 INFO  : The application 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:20:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+loadhw C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+dow C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf
+----------------End of Script----------------
+
+10:20:20 INFO  : Memory regions updated for context APU
+10:20:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:20 INFO  : 'con' command is executed.
+10:20:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+con
+----------------End of Script----------------
+
+10:20:20 INFO  : Launch script is exported to file 'C:\Users\taras\Documents\watch\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ur.elf_on_local.tcl'
+10:20:55 INFO  : Disconnected from the channel tcfchan#3.
+10:20:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574575A" && level==0} -index 1' command is executed.
+10:20:57 INFO  : 'fpga -state' command is executed.
+10:20:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:57 INFO  : Jtag cable 'Digilent Zybo 210279574575A' is selected.
+10:20:57 INFO  : 'jtag frequency' command is executed.
+10:20:57 INFO  : Sourcing of 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:20:57 INFO  : Context for 'APU' is selected.
+10:20:57 INFO  : Hardware design information is loaded from 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:20:57 INFO  : Context for 'APU' is selected.
+10:20:57 INFO  : 'stop' command is executed.
+10:20:58 INFO  : 'ps7_init' command is executed.
+10:20:58 INFO  : 'ps7_post_config' command is executed.
+10:20:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:20:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:58 INFO  : The application 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:20:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+loadhw C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+dow C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf
+----------------End of Script----------------
+
+10:20:58 INFO  : Memory regions updated for context APU
+10:20:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:58 INFO  : 'con' command is executed.
+10:20:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+con
+----------------End of Script----------------
+
+10:20:58 INFO  : Launch script is exported to file 'C:\Users\taras\Documents\watch\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ur.elf_on_local.tcl'
+10:21:30 INFO  : Disconnected from the channel tcfchan#4.
+10:21:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574575A" && level==0} -index 1' command is executed.
+10:21:32 INFO  : 'fpga -state' command is executed.
+10:21:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:21:32 INFO  : Jtag cable 'Digilent Zybo 210279574575A' is selected.
+10:21:32 INFO  : 'jtag frequency' command is executed.
+10:21:32 INFO  : Sourcing of 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:21:32 INFO  : Context for 'APU' is selected.
+10:21:32 INFO  : Hardware design information is loaded from 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:21:32 INFO  : Context for 'APU' is selected.
+10:21:32 INFO  : 'stop' command is executed.
+10:21:33 INFO  : 'ps7_init' command is executed.
+10:21:33 INFO  : 'ps7_post_config' command is executed.
+10:21:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:21:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:33 INFO  : The application 'C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:21:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+loadhw C:/Users/taras/Documents/watch/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+dow C:/Users/taras/Documents/watch/project_1/project_1.sdk/ur/Debug/ur.elf
+----------------End of Script----------------
+
+10:21:33 INFO  : Memory regions updated for context APU
+10:21:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:33 INFO  : 'con' command is executed.
+10:21:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574575A"} -index 0
+con
+----------------End of Script----------------
+
+10:21:33 INFO  : Launch script is exported to file 'C:\Users\taras\Documents\watch\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ur.elf_on_local.tcl'
+10:21:34 INFO  : Disconnected from the channel tcfchan#5.
+10:22:38 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
