@@ -18,7 +18,6 @@ int seconds = 0;
 int minutes = 0;
 int hours = 0;
 int setTimeMode = 0;
-int setHoursMinutesSeconds = 1;
 
 // STOPWATCH
 int stopwatchTimer = 0;
@@ -68,7 +67,7 @@ int button;
 // MAIN
 int main() {
 
-  printf("Hello, World!\n");
+  printf("Hello, World!\n\r");
 
   introduction();
 
@@ -102,16 +101,16 @@ void buttonInterrupt(int button) {
   // read which button is pressed
   // button = ???
 
-  printf("Button interrupt.\n");
+  // printf("Button interrupt.\n\r");
 
   if(button == 4) { // Invert display.
-    printf("Invert ASCII GUI.");
+    // printf("Invert ASCII GUI.");
     displayInvert = !displayInvert;
     button = 0;
   }
 
   if(programMode == programs && button != 0) { // Press any key to stop alarm.
-    printf("Stop alarm.\n");
+    printf("Stop alarm.\n\r");
     alarming = 0;
     alarmSet = setAlarm;
     newProgramMode = 1;
@@ -119,10 +118,10 @@ void buttonInterrupt(int button) {
     return;
   }
 
-  if(button == 1) { // Toggle program modes.
+  if(button == 1 && !setAlarmMode && !setTimeMode) { // Toggle program modes.
     newProgramMode++;
     if(newProgramMode == programs) newProgramMode = 1;
-    printf("New Program Mode: %i\n", newProgramMode);
+    // printf("New Program Mode: %i\n\r", newProgramMode);
   }
 
   updateProgram(button);
@@ -133,7 +132,7 @@ void buttonInterrupt(int button) {
 
 void timeInterrupt() {
 
-  printf("Time interrupt.\n");
+  printf("Time interrupt.\n\r");
 
   timer++; // Update timer.
 
@@ -184,7 +183,7 @@ void updateProgram(int input) {
 
   programMode = newProgramMode;
 
-  printf("Switching Program Mode.\n");
+  // printf("Switching Program Mode.\n\r");
 
   switch (programMode) {
     case 1: // Time.
@@ -227,12 +226,12 @@ void updateProgram(int input) {
       }
 
       // Toggle Start Adjust / Adjust Hours.
-      else if((setAlarmMode == 0 && input == 3) || (setAlarmMode == 2 && input == 2)) {
+      else if((setAlarmMode == 0 && input == 3) || (setAlarmMode == 2 && input == 1)) {
         setAlarmMode = 1;
       }
 
       // Adjust Minutes.
-      else if(setAlarmMode == 1 && input == 2) {
+      else if(setAlarmMode == 1 && input == 1) {
         setAlarmMode = 2;
       }
 
@@ -260,6 +259,34 @@ void updateProgram(int input) {
     break;
 
     case 4: // Set Time.
+
+      if((setTimeMode == 0 && input == 3) || (setTimeMode == 3 && input == 1)) {
+        setTimeMode = 1; // Toggle set time. (Hours)
+        break;
+      }
+
+      else if(setTimeMode == 1 && input == 1) {
+        setTimeMode = 2; // Set minutes.
+        break;
+      }
+
+      else if(setTimeMode == 2 && input == 1) {
+        setTimeMode = 3; // Set seconds.
+        break;
+      }
+
+      else if(input == 3) {
+        setTimeMode = 0; // Return from setting time.
+        break;
+      }
+
+      if(setTimeMode == 1 && input == 2) timer += 3600;
+      else if(setTimeMode == 2 && input == 2) timer += 60;
+      else if(setTimeMode == 3 && input == 2) timer += 1;
+
+      hours = (timer / 3600) % 60;
+      minutes = (timer / 60) % 60;
+      seconds = (timer) % 60;
 
       // Display time.
 
@@ -302,7 +329,7 @@ void updateDisplay() {
 
     displayColon();
 
-    printf("[Time Mode]\n");
+    printf("[Time Mode]\n\r");
 
     break;
 
@@ -322,7 +349,7 @@ void updateDisplay() {
     printf("[Stopwatch Mode]");
     if(stopwatchCounting) printf("[Counting]");
     if(stopwatchLapping) printf("[Lapping]");
-    printf("\n");
+    printf("\n\r");
 
     break;
 
@@ -343,7 +370,7 @@ void updateDisplay() {
     if(setAlarm) printf("[Set]");
     if(setAlarmMode == 1) printf("[Adjust Hours]");
     if(setAlarmMode == 2) printf("[Adjust Minutes]");
-    printf("\n");
+    printf("\n\r");
 
     break;
 
@@ -359,17 +386,17 @@ void updateDisplay() {
     printf("[Set Time Mode]");
 
     if(setTimeMode) {
-      switch (setHoursMinutesSeconds) {
+      switch (setTimeMode) {
         case 1:
-          printf("[Set hours]\n");
+          printf("[Set hours]");
           if(timer%2 == 0) clearHours();
         break;
         case 2:
-          printf("[Set Minutes]\n");
+          printf("[Set Minutes]");
           if(timer%2 == 0) clearMinutes();
         break;
         case 3:
-          printf("Set Seconds");
+          printf("[Set Seconds]");
           if(timer%2 == 0) clearSeconds();
         break;
         default:
@@ -378,7 +405,7 @@ void updateDisplay() {
 
     }
 
-    printf("\n");
+    printf("\n\r");
 
     break;
 
@@ -395,7 +422,7 @@ void updateDisplay() {
         display[timer % displayWidth][i] = '&';
     }
 
-    printf("[Alarming Mode]\n");
+    printf("[Alarming Mode]\n\r");
 
     break;
 
@@ -420,7 +447,7 @@ void printDisplay() { // The actual printing.
       for(int j = 0; j < displayWidth; j++) {
         printf("%c",display[j][i]);
       }
-      printf("\n");
+      printf("\n\r");
     }
   } else {
     for(int i = 0; i < displayHeight; i++) {
@@ -428,7 +455,7 @@ void printDisplay() { // The actual printing.
         if(display[j][i] == '&') printf(" ");
         else printf("X");
       }
-      printf("\n");
+      printf("\n\r");
     }
   }
 }
@@ -524,7 +551,7 @@ void displayColon() {
 
 void initDisplay() {
 
-  printf("Initialising display...\n");
+  printf("Initialising display...\n\r");
 
   for(int i = 0; i < displayWidth; i++) {
     for(int j = 0; j < displayHeight; j++) {
@@ -532,30 +559,20 @@ void initDisplay() {
     }
   }
 
-  printf("Display initalised.\n");
+  printf("Display initalised.\n\r");
 }
 
 void introduction() {
-  printf("Welcome to the Casio Watch.\n");
-  printf("\n");
-  printf("Controls:\n");
-  printf("\n");
-  printf("(q) Reset/Lap/Adjust      (e) Light\n");
-  printf("(a) Mode                  (d) Start/Stop/Set\n");
-  printf("\n");
-  printf("Timing:\n");
-  printf("\n");
-  printf("(1) +1 second.\n");
-  printf("(2) +10 seconds.\n");
-  printf("(3) +1 minute.\n");
-  printf("(4) +10 minutes.\n");
-  printf("(5) +1 hour.\n");
-  printf("(6) +10 hours.\n");
-  printf("\n");
-  printf("Press (h) for help.\n");
-  printf("Press (x) to exit.\n");
-  printf("\n");
-  printf("Press any of the keys to continue...\n");
+  system("clear");
+  printf("Hello World!\n\r");
+  printf("\n\r");
+  printf("Welcome to the Casio Watch.\n\r");
+  printf("\n\r");
+  printf("Controls:\n\r");
+  printf("\n\r");
+  printf("(3) Reset/Lap/Adjust      (4) Light\n\r");
+  printf("(1) Mode                  (2) Start/Stop/Set\n\r");
+  printf("\n\r");
 }
 
 int readKeyboard() {
