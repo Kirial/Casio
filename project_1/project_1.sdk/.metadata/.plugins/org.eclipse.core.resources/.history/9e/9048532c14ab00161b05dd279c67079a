@@ -248,7 +248,7 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 	// Enable interrupt
 	XGpio_InterruptEnable(&BTNInst, BTN_INT);
 	XGpio_InterruptGlobalEnable(&BTNInst);
-	XGpio_InterruptEnable(&SWTInst, SWT_INT);
+	Gpio_InterruptEnable(&SWTInst, SWT_INT);
 		XGpio_InterruptGlobalEnable(&SWTInst);
 
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
