@@ -2,14 +2,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <thread>
-//#include <curses.h>
+//#include <thread>
+#include <curses.h>
 #include "asciisymbols_v2.h"
 
 // PROGRAM
 const int programs = 5; // Amount of
-int programMode = 1; // 1 - Time, 2 - Stopwatch, 3 - Set Alarm, 4 - Set Time, 5 - Alarming
-int newProgramMode = 1;
+int programMode = 0; // 1 - Time, 2 - Stopwatch, 3 - Set Alarm, 4 - Set Time, 5 - Alarming
+int newProgramMode = 0;
+int buttonPressed;
 
 // TIME
 int timer = 0;
@@ -57,6 +58,7 @@ void displayColon();
 // PROGRAM Functions
 void introduction();
 void updateProgram(int input);
+int readKeyboard();
 
 // INTERRUPTS
 void timeInterrupt();
@@ -72,19 +74,20 @@ int main() {
 
   initDisplay();
 
-  updateDisplay();
+  // buttonInterrupt(1);
+  // buttonInterrupt(1);
+  // buttonInterrupt(1);
+  // buttonInterrupt(1);
 
-  timeInterrupt();
+  while (true) {
 
-  timeInterrupt();
+    if(readKeyboard()) {
 
-  timeInterrupt();
-
-  timeInterrupt();
-
-  buttonInterrupt(1);
-
-  buttonInterrupt(4);
+        buttonInterrupt(buttonPressed);
+        updateDisplay();
+        buttonPressed = 0;
+    }
+  }
 
   return 0;
 
@@ -108,7 +111,7 @@ void buttonInterrupt(int button) {
   }
 
   if(programMode == programs && button != 0) { // Press any key to stop alarm.
-    printf("Stop alarm.");
+    printf("Stop alarm.\n");
     alarming = 0;
     alarmSet = setAlarm;
     newProgramMode = 1;
@@ -119,6 +122,7 @@ void buttonInterrupt(int button) {
   if(button == 1) { // Toggle program modes.
     newProgramMode++;
     if(newProgramMode == programs) newProgramMode = 1;
+    printf("New Program Mode: %i\n", newProgramMode);
   }
 
   updateProgram(button);
@@ -180,6 +184,8 @@ void updateProgram(int input) {
 
   programMode = newProgramMode;
 
+  printf("Switching Program Mode.\n");
+
   switch (programMode) {
     case 1: // Time.
 
@@ -218,25 +224,21 @@ void updateProgram(int input) {
 
       if(setAlarmMode == 0 && input == 2) { // Toggle set alarm.
         setAlarm = !setAlarm;
-        return;
       }
 
       // Toggle Start Adjust / Adjust Hours.
-      if((setAlarmMode == 0 && input == 3) || (setAlarmMode == 2 && input == 2)) {
+      else if((setAlarmMode == 0 && input == 3) || (setAlarmMode == 2 && input == 2)) {
         setAlarmMode = 1;
-        return;
       }
 
       // Adjust Minutes.
-      if(setAlarmMode == 1 && input == 2) {
+      else if(setAlarmMode == 1 && input == 2) {
         setAlarmMode = 2;
-        return;
       }
 
       // End Adjust.
-      if(setAlarmMode > 0 && input == 3) {
+      else if(setAlarmMode > 0 && input == 3) {
         setAlarmMode = 0;
-        return;
       }
 
       // Add hour
@@ -254,8 +256,6 @@ void updateProgram(int input) {
 
       alarmHours = (alarmTime / 3600) % 60;
       alarmMinutes = (alarmTime / 60) % 60;
-
-      return;
 
     break;
 
@@ -277,6 +277,8 @@ void updateProgram(int input) {
 
     break;
   }
+
+  //updateDisplay();
 
   return;
 }
@@ -312,7 +314,9 @@ void updateDisplay() {
     setCharDisplay(4, stopwatchMinutes%10);
     setCharDisplay(5, stopwatchSeconds/10);
     setCharDisplay(6, stopwatchSeconds%10);
+
     toggleColon = stopwatchTimer%2;
+
     displayColon();
 
     printf("[Stopwatch Mode]");
@@ -322,13 +326,15 @@ void updateDisplay() {
 
     break;
 
-    case 3:
+    case 3: // Set Alarm Mode
 
     setCharDisplay(1, alarmHours/10);
     setCharDisplay(2, alarmHours%10);
     setCharDisplay(3, alarmMinutes/10);
     setCharDisplay(4, alarmMinutes%10);
+
     toggleColon = 1;
+
     displayColon();
 
     // Show on / off.
@@ -337,11 +343,11 @@ void updateDisplay() {
     if(setAlarm) printf("[Set]");
     if(setAlarmMode == 1) printf("[Adjust Hours]");
     if(setAlarmMode == 2) printf("[Adjust Minutes]");
-    printf("/n");
+    printf("\n");
 
     break;
 
-    case 4:
+    case 4: // Set Time Mode
 
     setCharDisplay(1, hours/10);
     setCharDisplay(2, hours%10);
@@ -369,7 +375,10 @@ void updateDisplay() {
         default:
         break;
       }
+
     }
+
+    printf("\n");
 
     break;
 
@@ -386,7 +395,7 @@ void updateDisplay() {
         display[timer % displayWidth][i] = '&';
     }
 
-    printf("[Alarming Mode]");
+    printf("[Alarming Mode]\n");
 
     break;
 
@@ -461,11 +470,11 @@ void setCharDisplay(int position, int digit) {
 }
 
 void clearDisplay() {
-  // for(int i = 0; i < displayWidth; i++) {
-  //   for(int j = 0; j < displayHeight; j++) {
-  //     display[i][j] = ' ';
-  //   }
-  // }
+  for(int i = 0; i < displayWidth; i++) {
+    for(int j = 0; j < displayHeight; j++) {
+      display[i][j] = ' ';
+    }
+  }
 
   system("clear");
 }
@@ -547,4 +556,55 @@ void introduction() {
   printf("Press (x) to exit.\n");
   printf("\n");
   printf("Press any of the keys to continue...\n");
+}
+
+int readKeyboard() {
+
+  char c = 0;
+
+  initscr();
+  noecho();
+  cbreak();
+  timeout(1);
+
+  c = getch();
+
+  nocbreak();
+  endwin();
+
+  switch (c) {
+
+    // case '1': // +1 seconds
+    // break;
+    // case '2': // +10 seconds
+    // break;
+    // case '3': // +1 minutes
+    // break;
+    // case '4': // +10 minutes
+    // break;
+    // case '5': // +1 hours
+    // break;
+    // case '6': // +10 hours
+    // break;
+
+    case 'q': // Light
+    buttonPressed = 3;
+    break;
+    case 'a': // Mode
+    buttonPressed = 1;
+    break;
+    case 'e': // Adjust / Reset
+    buttonPressed = 4;
+    break;
+    case 'd': // Start / Stop
+    buttonPressed = 2;
+    break;
+
+    default:
+    break;
+
+  }
+
+  return buttonPressed;
+
 }
